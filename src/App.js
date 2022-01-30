@@ -12,9 +12,9 @@ export default class App extends React.PureComponent {
   }
 
   componentDidMount() {
-    // fetch('https://jsonplaceholder.typicode.com/posts')
+    //через отдельный компонент получаем данные
     getData()
-      //.then((response) => response.json())
+    //преобразуем полученный json в list и устанавливаем его в стэйт
       .then((list) => {
         console.log(list);
         this.setState({ list });
@@ -24,6 +24,7 @@ export default class App extends React.PureComponent {
   render() {
     return (
       <div>
+        {/* Перебираем и отображаем сам список в потомке. Лист передаем через стэйт */}
        <ListView list={this.state.list}/>
       </div>
     );
