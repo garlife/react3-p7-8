@@ -5,7 +5,7 @@ import ListViewTemplate from "./ListViewTemplate"
 const ListView = ({list}) => (
   <ul>
     {/* перебираем массив и выводим списком */}
-    {list.map(({id, title, body}) => (
+    {list.slice(0, 5).map(({id, title, body}) => (
       <li key={id}>
         <ListViewTemplate title={title} body={body}/>
       </li>

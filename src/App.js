@@ -16,7 +16,7 @@ export default class App extends React.PureComponent {
     getData()
     //преобразуем полученный json в list и устанавливаем его в стэйт
       .then((list) => {
-        console.log(list);
+        console.log(list.slice(0, 5));
         this.setState({ list });
       });
   }
