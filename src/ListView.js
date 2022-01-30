@@ -1,13 +1,13 @@
 import React from 'react';
+import ListViewTemplate from "./ListViewTemplate"
 
 //на вход получаем объект с массивом лист
-const ListView = ({ list }) => (
+const ListView = ({list}) => (
   <ul>
     {/* перебираем массив и выводим списком */}
-    {list.map(({ title, body, id }) => (
+    {list.map(({id, title, body}) => (
       <li key={id}>
-        <h3>{title}</h3>
-        <p>{body}</p>
+        <ListViewTemplate title={title} body={body}/>
       </li>
     ))}
   </ul>
